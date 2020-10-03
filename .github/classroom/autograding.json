@@ -61,11 +61,21 @@
       "points": 10
     },
     {
+      "name": "Вывод подматрицы",
+      "setup": ".github/build.sh",
+      "run": "./a.out 10 2 1",
+      "input": "",
+      "output": "1.000e+01 9.000e+00 3.000e+01\r\n 9.000e+00 9.000e+00 2.900e+01",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
       "name": "Формула 1",
       "setup": ".github/build.sh",
       "run": "./a.out 3 3 1",
       "input": "",
-      "output": "3.000e+00 2.000e+00 1.000e+00\r\n 2.000e+00 2.000e+00 1.000e+00\r\n 1.000e+00 1.000e+00 1.000e+00",
+      "output": "3.000e+00 2.000e+00 1.000e+00 4.000e+00\r\n 2.000e+00 2.000e+00 1.000e+00 3.000e+00\r\n 1.000e+00 1.000e+00 1.000e+00 2.000e+00",
       "comparison": "included",
       "timeout": 10,
       "points": 10
@@ -75,7 +85,7 @@
       "setup": ".github/build.sh",
       "run": "./a.out 3 3 2",
       "input": "",
-      "output": "1.000e+00 2.000e+00 3.000e+00\r\n 2.000e+00 2.000e+00 3.000e+00\r\n 3.000e+00 3.000e+00 3.000e+00",
+      "output": "1.000e+00 2.000e+00 3.000e+00 4.000e+00\r\n 2.000e+00 2.000e+00 3.000e+00 5.000e+00\r\n 3.000e+00 3.000e+00 3.000e+00 6.000e+00",
       "comparison": "included",
       "timeout": 10,
       "points": 10
@@ -85,7 +95,7 @@
       "setup": ".github/build.sh",
       "run": "./a.out 3 3 3",
       "input": "",
-      "output": "0.000e+00 1.000e+00 2.000e+00\r\n 1.000e+00 0.000e+00 1.000e+00\r\n 2.000e+00 1.000e+00 0.000e+00",
+      "output": "0.000e+00 1.000e+00 2.000e+00 2.000e+00\r\n 1.000e+00 0.000e+00 1.000e+00 2.000e+00\r\n 2.000e+00 1.000e+00 0.000e+00 2.000e+00",
       "comparison": "included",
       "timeout": 10,
       "points": 10
@@ -95,7 +105,7 @@
       "setup": ".github/build.sh",
       "run": "./a.out 3 3 4",
       "input": "",
-      "output": "1.000e+00 5.000e-01 3.333e-01\r\n 5.000e-01 3.333e-01 2.500e-01\r\n 3.333e-01 2.500e-01 2.000e-01",
+      "output": "1.000e+00 5.000e-01 3.333e-01 1.333e+00\r\n 5.000e-01 3.333e-01 2.500e-01 7.500e-01\r\n 3.333e-01 2.500e-01 2.000e-01 5.333e-01",
       "comparison": "included",
       "timeout": 10,
       "points": 10
@@ -146,6 +156,46 @@
       "run": "./a.out 5 5 1",
       "input": "",
       "output": "Time:",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Расчёт невязки",
+      "setup": ".github/build.sh",
+      "run": "./a.out 5 5 1",
+      "input": "",
+      "output": "Residual:",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Расчёт ошибки",
+      "setup": ".github/build.sh",
+      "run": "./a.out 5 5 1",
+      "input": "",
+      "output": "Error:",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Расчёт ответа",
+      "setup": ".github/build.sh",
+      "run": "./a.out 5 5 1",
+      "input": "",
+      "output": "Solution:",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Проверка матрицы на вырожденность",
+      "setup": ".github/build.sh",
+      "run": "echo \"1 1 1 1\" > a.in && .github/test_ret_val.sh -4 2 2 0 a.in",
+      "input": "",
+      "output": "",
       "comparison": "included",
       "timeout": 10,
       "points": 10
